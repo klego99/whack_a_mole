@@ -13,7 +13,8 @@ import { useFrame } from "@react-three/fiber";
 export default function Diglett(props) {
   const { nodes, materials } = useGLTF("model/diglett.glb");
   const group = useRef();
-  useFrame(()=>(group.current.rotation.x+=0.01))
+  
+  // useFrame(()=>(group.current.position.y+=Game.moving.move))
 
   return (
     <group ref={group} {...props} dispose={null}>
