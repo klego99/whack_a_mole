@@ -22,7 +22,7 @@ export default function Game() {
 
   function Game_System(){
     const getRandom = (min=0, max=8) => Math.floor(Math.random() * (max - min) + min);
-    console.log(getRandom());
+    console.log(getRandom);
   }
 
 
@@ -58,6 +58,9 @@ export default function Game() {
         </Suspense>
 
       </Canvas>
+      <p>
+        {Game_System.getRandom}
+      </p>
     </div>
   );
 }
