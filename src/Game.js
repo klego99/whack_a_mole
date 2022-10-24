@@ -20,8 +20,15 @@ import { BooleanKeyframeTrack, VectorKeyframeTrack } from "three";
 const Game = () =>{
   const [hammerPos, setPos] = useState({x: 0, y: 0, z: 0});
   const offset = 2;
-
+  const [diglettY, setY]= useState({A:-3,B:-3,C:-3,D:-3,E:-3,F:-3,G:-3,H:-3,I:-3})
   function setRandom(){
+    const rand = Math.floor(Math.random() * 9);
+    switch(rand){
+      case 0:
+        diglettY.A=0
+
+
+    }
 
   }
 
