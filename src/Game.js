@@ -25,7 +25,32 @@ const Game = () =>{
     const rand = Math.floor(Math.random() * 9);
     switch(rand){
       case 0:
-        diglettY.A=0
+        diglettY.A=0;
+        break;
+      case 1:
+        diglettY.B=0;
+        break;
+      case 2:
+        diglettY.C=0;
+        break;
+      case 3: 
+        diglettY.D=0;
+        break;
+      case 4:
+        diglettY.E=0;
+        break;
+      case 5:
+        diglettY.F=0;
+        break;
+      case 6:
+        diglettY.G=0;
+        break;
+      case 7:
+        diglettY.H=0;
+        break;
+      case 8:
+        diglettY.I=0;
+        break;        
 
 
     }
@@ -72,7 +97,7 @@ const Game = () =>{
         break;
     }
   }
-
+  setRandom();
   return (
     <div id="game">
       <div> 게임 화면 </div>
@@ -83,15 +108,15 @@ const Game = () =>{
         <spotLight position={[20, 20, 20]} angle={0.3} />
         <Suspense fallback={null}>
           <Hammer2 position={[hammerPos.x, hammerPos.y, hammerPos.z]} scale={[1,1,1]} />       
-          <Diglett position={[0, -3, 0]} scale={[5, 5, 5]} onClick={ () => {Bonk(0)}}/>
-          <Diglett2 position={[6, -3, 0]} scale={[5, 5, 5]} onClick={ () => {Bonk(1)}}/>
-          <Diglett3 position={[-6, -3, 0]} scale={[5, 5, 5]} onClick={ () => {Bonk(2)}}/>
-          <Diglett4 position={[0, -3, 6]} scale={[5, 5, 5]} onClick={ () => {Bonk(3)}}/>
-          <Diglett5 position={[-6, -3, 6]} scale={[5, 5, 5]} onClick={ () => {Bonk(4)}}/>
-          <Diglett6 position={[6, -3, 6]} scale={[5, 5, 5]} onClick={ () => {Bonk(5)}}/>
-          <Diglett7 position={[6, -3, -6]} scale={[5, 5, 5]} onClick={ () => {Bonk(6)}}/>
-          <Diglett8 position={[0, -3, -6]} scale={[5, 5, 5]} onClick={ () => {Bonk(7)}}/>
-          <Diglett9 position={[-6, -3, -6]} scale={[5, 5, 5]} onClick={ () => {Bonk(8)}}/>
+          <Diglett position={[0, diglettY.A, 0]} scale={[5, 5, 5]} onClick={ () => {Bonk(0)}}/>
+          <Diglett2 position={[6, diglettY.B, 0]} scale={[5, 5, 5]} onClick={ () => {Bonk(1)}}/>
+          <Diglett3 position={[-6, diglettY.C, 0]} scale={[5, 5, 5]} onClick={ () => {Bonk(2)}}/>
+          <Diglett4 position={[0, diglettY.D, 6]} scale={[5, 5, 5]} onClick={ () => {Bonk(3)}}/>
+          <Diglett5 position={[-6, diglettY.E, 6]} scale={[5, 5, 5]} onClick={ () => {Bonk(4)}}/>
+          <Diglett6 position={[6, diglettY.F, 6]} scale={[5, 5, 5]} onClick={ () => {Bonk(5)}}/>
+          <Diglett7 position={[6, diglettY.G, -6]} scale={[5, 5, 5]} onClick={ () => {Bonk(6)}}/>
+          <Diglett8 position={[0, diglettY.H, -6]} scale={[5, 5, 5]} onClick={ () => {Bonk(7)}}/>
+          <Diglett9 position={[-6, diglettY.I, -6]} scale={[5, 5, 5]} onClick={ () => {Bonk(8)}}/>
           <Grass position={[0, -1, 0]} scale ={[5,5,5]}/>
           <Hole position={[0, 0, 0]} scale ={[3,3,3]}/>
           <Hole position={[6, 0, 0]} scale ={[3,3,3]}/>
