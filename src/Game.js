@@ -22,38 +22,47 @@ const Game = () =>{
   const offset = 2;
   const [diglettY, setY]= useState({A:-3,B:-3,C:-3,D:-3,E:-3,F:-3,G:-3,H:-3,I:-3})
   function setRandom(){
+    while(true){
     const rand = Math.floor(Math.random() * 9);
     switch(rand){
       case 0:
         diglettY.A=0;
+        setTimeout(()=>{diglettY.A=-3},3000)
         break;
       case 1:
         diglettY.B=0;
+        setTimeout(()=>{diglettY.B=-3},3000)
         break;
       case 2:
         diglettY.C=0;
+        setTimeout(()=>{diglettY.C=-3},3000)
         break;
       case 3: 
         diglettY.D=0;
+        setTimeout(()=>{diglettY.D=-3},3000)
         break;
       case 4:
         diglettY.E=0;
+        setTimeout(()=>{diglettY.E=-3},3000)
         break;
       case 5:
         diglettY.F=0;
+        setTimeout(()=>{diglettY.F=-3},3000)
         break;
       case 6:
         diglettY.G=0;
+        setTimeout(()=>{diglettY.G=-3},3000)
         break;
       case 7:
         diglettY.H=0;
+        setTimeout(()=>{diglettY.H=-3},3000)
         break;
       case 8:
         diglettY.I=0;
+        setTimeout(()=>{diglettY.I=-3},3000)
         break;        
-
-
     }
+  }
 
   }
 
