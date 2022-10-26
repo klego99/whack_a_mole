@@ -24,7 +24,7 @@ const Game = () =>{
   const [diglettY, setY]= useState({A:-3,B:-3,C:-3,D:-3,E:-3,F:-3,G:-3,H:-3,I:-3})
 
   
-  
+  useEffect(()=>{
   const diglettRandom=setInterval(() => {
       const rand = Math.floor(Math.random() * 9);
       switch(rand){
@@ -65,9 +65,10 @@ const Game = () =>{
           setTimeout(()=>{setY.I=-3},2000);
           break;        
         }
+        
       }, 1000);
-  
-
+    },[]);
+    
   function Bonk(index){
     switch(index){
       case 0:
