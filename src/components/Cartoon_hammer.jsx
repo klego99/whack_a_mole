@@ -8,11 +8,19 @@ title: Cartoon hammer
 
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
-
+import { useFrame } from "@react-three/fiber";
 export default function Model(props) {
   const { nodes, materials } = useGLTF('model/cartoon_hammer.glb')
+  const group = useRef();
+  
+  
+  useFrame(()=>{group.current.rotation.z+=1;
+  group.current.rotation.z-=1;
+  });
+
+  
   return (
-    <group {...props} dispose={null}>
+    <group ref={group}{...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group position={[0, -0.13, 1.08]} rotation={[-Math.PI, 0, -0.05]}>
           <mesh geometry={nodes.Marteau_0.geometry} material={materials.Gris} />

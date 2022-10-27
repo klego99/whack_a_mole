@@ -22,8 +22,8 @@ const Game = () =>{
   const offset = 2;
   var i =0;
   const [diglettY, setY]= useState({A:-3,B:-3,C:-3,D:-3,E:-3,F:-3,G:-3,H:-3,I:-3})
+  const diglettRandom=useRef();
 
-  
   useEffect(()=>{
   diglettRandom.current=setInterval(() => {
     RandomDig();
