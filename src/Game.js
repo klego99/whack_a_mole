@@ -25,50 +25,51 @@ const Game = () =>{
 
   
   useEffect(()=>{
-  const diglettRandom=setInterval(() => {
-      const rand = Math.floor(Math.random() * 9);
-      switch(rand){
-        case 0:
-          setY.A=0;
-          setTimeout(()=>{setY.A=-3},2000);
-          break;
-        case 1:
-          setY.B=0;
-          setTimeout(()=>{setY.B=-3},2000);
-          break;
-        case 2:
-          setY.C=0;
-          setTimeout(()=>{setY.C=-3},2000);
-          break;
-        case 3: 
-          setY.D=0;
-          setTimeout(()=>{setY.D=-3},2000);
-          break;
-        case 4:
-          setY.E=0;
-          setTimeout(()=>{setY.E=-3},2000);
-          break;
-        case 5:
-          setY.F=0;
-          setTimeout(()=>{setY.F=-3},2000);
-          break;
-        case 6:
-          setY.G=0;
-          setTimeout(()=>{setY.G=-3},2000);
-          break;
-        case 7:
-          setY.H=0;
-          setTimeout(()=>{setY.H=-3},2000);
-          break;
-        case 8:
-          setY.I=0;
-          setTimeout(()=>{setY.I=-3},2000);
-          break;        
-        }
-        
-      }, 1000);
+  diglettRandom.current=setInterval(() => {
+    RandomDig();
+      }, 1000); 
     },[]);
-    
+  function RandomDig(){
+    const rand = Math.floor(Math.random() * 9);
+    switch(rand){
+      case 0:
+        diglettY.A=0;
+        setTimeout(()=>{diglettY.A=-3},2000);
+        break;
+      case 1:
+        diglettY.B=0;
+        setTimeout(()=>{diglettY.B=-3},2000);
+        break;
+      case 2:
+        diglettY.C=0;
+        setTimeout(()=>{diglettY.C=-3},2000);
+        break;
+      case 3: 
+        diglettY.D=0;
+        setTimeout(()=>{diglettY.D=-3},2000);
+        break;
+      case 4:
+        diglettY.E=0;
+        setTimeout(()=>{diglettY.E=-3},2000);
+        break;
+      case 5:
+        diglettY.F=0;
+        setTimeout(()=>{diglettY.F=-3},2000);
+        break;
+      case 6:
+        diglettY.G=0;
+        setTimeout(()=>{diglettY.G=-3},2000);
+        break;
+      case 7:
+        diglettY.H=0;
+        setTimeout(()=>{diglettY.H=-3},2000);
+        break;
+      case 8:
+        diglettY.I=0;
+        setTimeout(()=>{diglettY.I=-3},2000);
+        break;        
+      }
+  }
   function Bonk(index){
     switch(index){
       case 0:
